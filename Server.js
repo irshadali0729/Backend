@@ -2,19 +2,19 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors())
+app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   console.log("Home page api /");
   res.status(201).send("<h3>Listing from Backend </h3>");
 });
 
-const profile={
-    name:"irshad",
-    add:"telco"
-}
+const profile = {
+  name: "irshad",
+  add: "telco",
+};
 
-app.get("/profile", (req, res) => {
+app.get("/api/profile", (req, res) => {
   console.log("Home page api /");
   res.status(201).json({
     profile,
